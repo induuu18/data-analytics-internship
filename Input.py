@@ -50,3 +50,8 @@ if (num % 3 == 0 or num % 7 == 0):
     print("This number is divisible by 3 or 7")
 else:
     print("This number is neither divisible by 3 or 7")
+
+#Concatenation of strings
+s1 = input("Enter the string 1 :")
+s2 = input("Enter the string 2 :")
+print(s1 + s2)
