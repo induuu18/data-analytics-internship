@@ -32,16 +32,18 @@ print(b[0][0])
 print(b[1][0])
 print(b[2].pop)
 
+#Printing a tuple
 tup1 = 10,20,30,40,50
 for i in tup1:
     print(i)
 
+#Printing nested tuple
 u = ((10,20) , (30,40))
 for i,j in u:
     print(i)
     print(j)
 
-#index and element retrival
+#Index and element retrival
 f = 11,12,13,14,15
 for i,j in enumerate(f):
     print('Index:',i,'Element:',j)
