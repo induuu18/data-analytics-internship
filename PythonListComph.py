@@ -52,7 +52,7 @@ lst = [i**2 if i%2 == 0 else i**3 for i in num2]
 print(lst)
 
 # 12-02-2026
-# Acess and print with index values of each element
+# Access and print with index values of each element
 a = [ 1 , 2 , 3 , 4 , 5 ]
 for i in a:
     print(i , a.index(i))
@@ -106,6 +106,13 @@ print('Ascending order :', res)
 res1 = sorted(numl , reverse=True)
 print('Descending order :' , res1)
 
+#Sorting of list using loops
+a = [1,20,56,78,99,32,50,29,5,14]
+for i in range(len(a)):
+    for j in range(len(a) - i -1):
+        if a[j] > a[j+1]:
+            a[j] , a[j+1] = a[j+1] , a[j]
+print(a)
 #Membership Check
 li = [10,20,30,40,50]
 print(20 in li)
