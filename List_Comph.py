@@ -113,6 +113,7 @@ for i in range(len(a)):
         if a[j] > a[j+1]:
             a[j] , a[j+1] = a[j+1] , a[j]
 print(a)
+
 #Membership Check
 li = [10,20,30,40,50]
 print(20 in li)
