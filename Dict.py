@@ -87,6 +87,7 @@ a = [1,2,3,4,5]
 di = {i:i**2 for i in a}
 print(di)
 
+# Printing K-V pairs where key is power of 2 and value is element of a list
 a1 = [1,2,3,4,5]
 d = {}
 for i in a1:
@@ -95,3 +96,38 @@ for i in a1:
     else:
         d[i**3] = i
 print(d)
+
+#Using Lambda function
+d = {(i**2 if i%2==0 else i**3): i for i in a1}
+print(d)
+#OR
+d = {(i**2 if i%2==0 else i**3) : (i if i%2==0 else i) for i in a1}
+print(d)
+
+# zip function
+Veh = ['Bicycle','Auto','Car','Bus']
+Whe = [2,3,4,6]
+M = ['road','road','road','road']
+print(list(zip(Veh,Whe,M)))
+
+for i in zip(Veh,Whe,M):
+    print(i)
+
+#all function
+lst = [True,True,True]
+res = all(lst)
+print(res)
+
+lst1 = [0==0,1==1,False]
+res1 = all(lst1)
+print(res1)
+
+#Any function
+lst2 = [True,True,False]
+res2 = any(lst2)
+print(res)
+
+lst2 = [False,False,False]
+res2 = any(lst2)
+print(res2)
+
