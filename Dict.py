@@ -130,4 +130,3 @@ print(res)
 lst2 = [False,False,False]
 res2 = any(lst2)
 print(res2)
-
