@@ -179,12 +179,12 @@ import numpy as np
 # print("Og array:",brr)
 
 #datatypes
-r = np.arange(1,10)
-print(f"Original array:{r}")
-c = np.float32(r)
-print(c)
-c = np.bool_(r)
-print(c)
+# r = np.arange(1,10)
+# print(f"Original array:{r}")
+# c = np.float32(r)
+# print(c)
+# c = np.bool_(r)
+# print(c)
 
 #Iterate elements in array using for loop
 #1D array
@@ -232,7 +232,7 @@ print(c)
 #     print(f"The element{j} is present at position{i}")
 
 # #arithematic operations in arrays
-arr=np.arange(1,10).reshape(3,3)
+# arr=np.arange(1,10).reshape(3,3)
 # print(f"Addition of arr+2:\n{arr+2}")
 # print(f"Subtraction of arr-2:\n{arr-2}")
 # print(f"Multiplication of arr*2:\n{arr*2}")
@@ -267,3 +267,292 @@ arr=np.arange(1,10).reshape(3,3)
 # print(f"he dimension of arr1 is{arr1.ndim}, the shape of arr1 is {arr1.shape}, the size of arr1 is {arr1.size}")
 # print(f"he dimension of arr2 is{arr2.ndim}, the shape of arr2 is {arr2.shape}, the size of arr2 is {arr2.size}")
 # print(arr1+arr2)
+
+#transpose()
+#for 1D array
+# import numpy as np
+# arr1 = np.arange(1,6)
+# print(arr1)
+# tarr1 = np.transpose(arr1)
+# print(tarr1)
+
+# #For 2D array
+# arr2 = np.arange(1,10).reshape(3,3)
+# print(arr2)
+# tarr2 = np.transpose(arr2)
+# print(tarr2)
+
+# #For 3D array
+# arr3 = np.arange(1,13).reshape(2,2,3)
+# print(arr3)
+# tarr3 = np.transpose(arr3)
+# print(tarr3)
+
+#using axes
+# arr4 = np.arange(1,25).reshape(2,3,4)
+# print(arr4)
+# tarr4 = np.transpose(arr4,axes=(1,2,0))
+# print(tarr4)
+
+# arr5 = np.arange(1,121).reshape(4,5,6)
+# print(arr5)
+# tarr5 = np.transpose(arr5,axes=(1,2,0))
+# print(tarr5)
+
+#is it view or copy?
+# arr2 = np.arange(1,10).reshape(3,3)
+# arr2[2] = 89
+# print(arr2)
+# tarr2 = np.transpose(arr2)
+# print(tarr2)
+
+#swapaxes()
+# srr = np.arange(1,61).reshape(3,4,5)
+# print(srr)
+# sarr = np.swapaxes(srr,2,0)
+# sarr[1] = 99 #creates view
+# print(sarr)
+# print(srr) 
+
+#Joining of n arrays with I arrays (concatentate())
+# array1 = np.arange(5)
+# array2 = np.arange(1,61,10)
+# carr = np.concatenate([array1,array2])
+# print(carr)
+
+#Adding three arrays
+# arr1 = np.arange(1,4)
+# arr2 = np.arange(4,10)
+# arr3 = np.arange(100,201,100)
+# res = np.concatenate([arr1,arr2,arr3])
+# print(res)
+
+# ar1 = np.arange(1,4)
+# ar2 = np.arange(4,10)
+# ar3 = np.arange(100,201,100)
+# emp = np.empty(11)
+# res = np.concatenate([ar1,ar2,ar3],out=emp)
+# print(res)
+
+# a1 = np.arange(1,13).reshape(2,2,3)
+# a2 = np.arange(1,25).reshape(2,3,4)
+# ca = np.concatenate((a1,a2),axis=None)
+# print(ca)
+
+#stack()
+# ar1 = np.array([10,20,30,40])
+# ar2 = np.array([50,60,70,80])
+# ar3=np.stack((ar1,ar2))
+# print(ar3)
+
+#vstack() - only for vertical stacking
+# a1 = np.array([['A','B','C'],
+#       ['D','E','F']])
+# a2=np.array([['G','H','I'],
+#              ['J','K','L']])
+# a3=np.vstack((a1,a2))
+# print(a3)
+
+#hstack - only for horizontal stacking 
+# a1 = np.array([['A','B','C'],
+#       ['D','E','F']])
+# a2=np.array([['G','H','I'],
+#              ['J','K','L']])
+# a3=np.hstack((a1,a2))
+# print(a3)
+
+#dstack() - only for 
+# a1 = np.array([['A','B','C'],
+#       ['D','E','F']])
+# a2=np.array([['G','H','I'],
+#              ['J','K','L']])
+# a3=np.dstack((a1,a2))
+# print(a3)
+
+#Splitting of Arrays(based on sections)
+# import numpy as np
+# arr = np.arange(1,7)
+# sarr = np.split(arr,2) #Split occurs in equal division
+# print(sarr)
+
+# arr1 = np.arange(1,25).reshape(6,4)
+# sarr1 = np.split(arr1,2,axis=1) #Splitting done based on axes
+# print(sarr1)
+
+# arr3 = np.arange(1,25).reshape(2,3,4)
+# sarr3 = np.split(arr3,2) #Splitting done based on axes
+# print(sarr3)
+
+#Splitting of Arrays(based on indexes)
+# arr = np.arange(1,7)
+# sparr = np.split(arr,[1,3])
+# print(sparr)
+
+#for 2D Array
+# arr = np.arange(1,25).reshape(6,4)
+# sparr = np.split(arr,[1,3],axis=0) #by default axis = 0
+# print(sparr)
+
+# arr = np.arange(1,25).reshape(6,4)
+# sparr = np.split(arr,[1,3],axis=1)
+# print(sparr)
+
+# #for 3D array
+# arr = np.arange(1,25).reshape(2,3,4)
+# sparr = np.split(arr,[1,3]) 
+# print(sparr)
+
+#Vertical split is only possible for dimensions >= 2
+#vsplit() - axis=0
+# arr = np.array([[10,20,30],[40,50,60]])
+# varr = np.vsplit(arr,2)
+# print(varr)
+
+# arr1 = np.arange(1,25).reshape(6,4)
+# varr1 = np.split(arr1,[1,2])
+# print(varr1)
+
+#hsplit() - axis = 1
+# arr1 = np.arange(1,7)
+# varr1 = np.hsplit(arr1,[1,3])
+# print(varr1)
+
+# arr1 = np.arange(1,25).reshape(4,6)
+# print(arr1)
+# varr1 = np.hsplit(arr1,[1,3])
+# print(varr1)
+
+#dsplit() - axis=2
+# arr1 = np.arange(1,25).reshape(2,3,4)
+# print(arr1)
+# varr1 = np.dsplit(arr1,2)
+# print(varr1)
+
+#array_split()
+# arr1 = np.arange(1,11)
+# varr1 = np.array_split(arr1,2)
+# print(varr1)
+
+# arr = np.array([1,2,3,4,56,7,8,9,10])
+# lst = [1,4,7]
+# sarr = arr[lst]
+# narr = sarr+10
+# print(np.resize(narr,(3,3)))
+
+# #Sorting of array
+# arr = np.array([10,15,29,25,3,45,21,99,27])
+# srr = np.sort(arr)
+# print(srr)
+
+# #Revesing of an array
+# rev = np.sort(arr)[::-1]
+# print(rev)
+
+#Sorting array of strings
+# a = ['Alia','Fioana','Daisy','Gojo Satoro','Saikiki','Tanjiro','Inosuke','Zeinstzu']
+# arr = np.sort(a)
+# print(np.array(arr))
+
+#Sorting of 2D Array
+# arr = np.array([[9, 2, 7],
+#                 [4, 8, 1],
+#                 [6, 3, 5]])
+# col_sorted = np.sort(arr, axis=0) #column-wise sorting
+# print(col_sorted)
+
+
+# rarr = np.array([[9, 2, 7],
+#                 [4, 8, 1],
+#                 [6, 3, 5]])
+# row_sorted = np.sort(rarr, axis=1) #row-wise sorting
+# print(row_sorted)
+
+#Working of order keyword arguement
+# dtype = [('name','S10'),('age','int'),('marks','float')] #S10 here is a byte string (fixed-length string)
+# values = [('Ram',21,89.56),('Nemma',19,70.9),('Daisy',22,89.3)]
+# arr = np.array(values,dtype=dtype)
+# print(arr)
+# print(np.sort(arr))
+# agearr = np.sort(arr,order='age')
+# print(agearr)
+
+#where function
+# arr = np.array([1,2,1,2,3,4,5,6])
+# lst = np.where(arr==2)
+# print(np.array(lst))
+
+#Prinitng only even numbers and display 1 in place of odd numbers
+# arr = np.array([1,2,1,2,3,4,5,6])
+# lst = np.where(arr%2==0,arr,"1")
+# print(np.array(lst))
+
+#insert()
+#for 1D Array
+# arr = np.array([1,32,56,23,89,9,5,30,99])
+# inserted = np.insert(arr,3,7)
+# print(inserted)
+
+# #for 2D array
+# arr1 = np.array([[10,20],[30,40]])
+# res = np.insert(arr1,1,100)
+# print(res) #2D array flattens and then add the element
+# print(arr1.ndim)
+# print(res.ndim)
+
+#without flattening
+# arr1 = np.array([[10,20],[30,40]])
+# res = np.insert(arr1,1,100,axis=0)
+# print(res) #2D array flattens and then add the element
+# print(arr1.ndim)
+# print(res.ndim)
+
+#append() function
+# arr = np.array([[10,20],[30,40]])
+# arr2=np.append(arr,[[99],[100]],axis=1)
+# print(arr2)
+
+#delete() function
+#for 1d array
+# arr = np.array([1,2,3,4,5])
+# darr = np.delete(arr,1)
+# print(darr)
+
+#for 2d array
+# arr = np.arange(1,10).reshape(3,3)
+# print(arr)
+# darr = np.delete(arr,1,axis=0) #for column;axis=1
+# print(darr)
+
+#Deleting a part of array using range and slicing
+#using range
+# arr = np.array([1,2,3,4,5,6,7]) #Range is exclusive
+# darr = np.delete(arr,range(1,5))
+# print(darr)
+
+#using slicing
+# arr = np.array([1,2,3,4,5,6,7]) #Range is exclusive
+# darr = np.delete(arr,np.s_[1:5])
+# print(darr)
+
+#Printing numbers divisible with 3 as * if not #
+# arr = np.array([[1,2,3],
+#                 [4,5,6],
+#                 [7,8,9]])
+# lst = np.where(arr%3==0,"*","#")
+# print(lst)
+
+
+# arr = np.array([[1,2,3],[4,5,6]])
+# app = np.append(arr,[[99],[100]],axis=1)
+# print(app)
+
+#Change element 3 to index 2
+import random
+arr = np.array([1,2,3,4,5,6])
+np.random.shuffle(arr)
+
+#change array
+arr0 = np.zeros([3,3])
+print(arr0)
+res = arr0+1 #or 1-A
+print(res)
